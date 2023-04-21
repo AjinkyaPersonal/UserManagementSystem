@@ -28,6 +28,7 @@ public class UserDataBase {
     public Boolean updateUserById(String userid, User user) {
         for ( User userObj : userList ) {
             if ( userObj.getUserId().equals(userid) ) {
+                userObj.setName(user.getName());
                 userObj.setUserName(user.getUserName());
                 userObj.setAddress(user.getAddress());
                 userObj.setPhoneNumber(user.getPhoneNumber());
